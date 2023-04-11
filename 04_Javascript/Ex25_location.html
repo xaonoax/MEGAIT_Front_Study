@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device, initial-scale=1.0">
+    <title>location example</title>
+</head>
+<body>
+    <form action="" name="myForm">
+        <div>
+            <lable>
+                naver<input type="radio" name="site" value="naver">
+            </lable>
+        </div>
+        <div>
+            <lable>
+                google<input type="radio" name="site" value="google">
+            </lable>
+        </div>
+        <div>
+            <lable>
+                daum<input type="radio" name="site" value="daum">
+            </lable>
+        </div>
+        <div><input type="button" value="Move!!" onclick="send()"></div>
+        <br><br>
+    </form>
+
+    <h1>history list</h1>
+    <p>새로운 문서로 이동하고, 브라우저의 뒤로가기 버튼 눌러보기</p>
+    <button onclick="move()">새로운 문서 열기</button>
+    <button onclick="forward()">앞으로 이동하기</button>
+    <p id="text"></p>
+
+</body>
+<script>
+    // document.location = 'Ex23_table.html';
+    with(document){
+        write("현재 문서의 URL 주소 : " + location.href + "<br>");
+        write("현재 문서의 hostname : " + location.hostname + "<br>");
+        write("현재 문서의 pathname : " + location.pathname + "<br>");
+    }
+
+    function send(){
+        var url = "";
+
+        // document.write("<h3> Value : " + myForm.site.value + "</h3><br>");
+
+        if(!myForm.site.value){
+            alert("이동하지 않으시겠습니까?");
+            location.reload();
+        }
+        else{
+            switch(myForm.site.value){
+                case 'naver':
+                    url = 'http://www.naver.com';
+                    break;
+                case 'google':
+                    url = 'http://www.google.com';
+                    break;
+                case 'daum':
+                    url = 'http://www.daum.net';
+                break;
+            }
+            location.href=url;
+        }
+
+    }
+    
+    function move(){
+        //assign() : 뒤로 가기 가능
+        location.assign("Ex25_history.html");
+
+        // replace() : 뒤로 가기 불가능
+        // location.replace("Ex25_history.html");
+    }
+
+    function forward(){
+        history.forward();
+    }
+
+    document.getElementById("text").innerHTML = "현재 브라우저 히스토리 목록 갯수 : "+ history.length;
+</script>
+</html>

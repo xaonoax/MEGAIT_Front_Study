@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>scripr tag에 코드 작성</title>
+</head>
+    <h1>이것은 스크립트 코드에 작성된 페이지입니다.</h1>
+    <hr>
+    <!-- this는 해당 속성이 포함된 태그 -->
+    <img src="img/cat.bmp"
+         onmouseover="over(this)"
+         onmouseout="out(this)"
+         onclick="clck(this)"
+         ondblclick="dblclick(this)"
+    >
+<body>
+</body>
+<script>
+    function over(arg){
+        arg.src = "img/cat.jpg";
+    }
+
+    function out(arg){
+        arg.src = "img/cat.bmp";
+    }
+
+    function clck(arg){
+        arg.src = "img/cat2.jpg";
+    }
+    
+
+    function dblclick(arg){
+        arg.width = "200";
+        alert("이걸 누르면 어떡해요ㅡㅡ")
+    }
+</script>
+</html>
