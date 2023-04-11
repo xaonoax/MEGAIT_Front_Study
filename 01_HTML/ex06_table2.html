@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Table Rowspan. Colspan</title>
+    <style>
+        td {
+            width: 200px;
+            background-color: rgb(240, 233, 255);
+        }
+    </style>
+</head>
+<body>
+    <h1>Table Rowspan, Colspan Training</h1>
+    <table border="3">
+        <caption><strong>rowspan, colspan</strong><br>Tranining</caption>
+        <tr>
+            <th colspan="2">head1</th>
+            <th>head2</th>
+        </tr>
+        <tr>
+            <td>data1</td>
+            <td>data2</td>
+            <td rowspan="2">data3</td>
+        </tr>
+        <tr>
+            <td>food1</td>
+            <td rowspan="100">food2</td>  <!-- 맨 마지막줄 rowspan은 수고하였습니다.(영향 없음) -->
+        </tr>
+    </table>
+</body>
+</html>

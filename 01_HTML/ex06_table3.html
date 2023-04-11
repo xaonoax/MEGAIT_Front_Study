@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Row Style Example</title>
+    <style> 
+        th, td {
+            width: 100px;
+            height: 15px;
+            padding: 10px;
+            text-align: center;
+        }
+        thead {
+            background: #fcffcb;
+        }
+        tbody {
+            background: #dbffd2;
+        }
+        tfoot {
+            background: #ffdcdf;
+        }
+    </style> <!-- padding은 내부(테이블 안)와 외부(테이블 선) 사이 간격 -->
+</head>
+<body>
+    <table border="1">
+        <caption>
+            <strong>
+                &lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt; <!-- &lt는< &gt는> -->
+            </strong>
+        </caption>
+        <thead>
+            <tr>
+                <th>tagname</th>
+                <th>region</th>
+                <th>screenread</th>
+                <th>misc</th> <!-- !important 붙이면 값을 못 바꾸게 함-->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>thead</td>
+                <td>제목</td>
+                <td rowspan="3">O</td>
+                <td style="background: rgb(212, 236, 255);"></td>
+            </tr>
+            <tr>
+                <td>tbody</td>
+                <td>본문</td>
+                
+                <td style="background: rgb(212, 236, 255);"></td>
+            </tr>
+            <tr>
+                <td>tfoot</td>
+                <td>요약</td>
+                
+                <td style="background: rgb(212, 236, 255);"></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="4">Summary</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

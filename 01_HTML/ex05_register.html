@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>회원가입</title>
+</head>
+<body>
+    <h1>가입을 환영합니다.</h1>
+    <form action="ex05_register_ok.html" method="get" enctype="multipart/form-data">  <!-- method post는 데이터가 안 들어감 get은 들어감 -->
+        <p>아이디 &nbsp;&nbsp;<input type="text" size="20" maxlength="12"
+            placeholder="아이디를 입력하세요" id="usetid1" name="userid2"/></p>
+        <p>비밀번호 <input type="password" size="20"/></p>
+        <p>
+            <strong>Gender</strong>
+            <label>Man <input type="radio" name="gender" checked value="M"/> </label>
+            <label>Woman <input type="radio" name="gender" value="W"/> </label>
+        </p>
+        <fieldset>
+            <legend>Hobby</legend>
+            <p>
+                <label>Drive <input type="checkbox" name="hobby" value="D"/></label>
+                <label>Movie <input type="checkbox" name="hobby" value="M"/></label>
+            </p>
+        </fieldset>
+        <p>
+            <select name="reason">
+                <option value="강제가입">강제가입</option>
+                <option value="반강제가입">반강제가입</option>
+                <option value="비밀가입">비밀가입</option>
+            </select>
+            <p>Satisfaction(상,중,하) <input type="range" name="satis" value ="1" min="1" max="3"></p>
+            <p>Transport <input type="text" name="trans" list="trans"/>
+                <!-- datalist : 사용자가 특정한 글자를 입력하면 지정된 목록을 보여준다. -->
+                <datalist id="trans">
+                    <option value="bus" label="bus"></option>
+                    <option value="metro"></option>
+                    <option value="taxi"></option>
+                </datalist>
+            </p>
+            <p><input type="submit" value="가입완료"></p>
+            <p><input type="reset" value="초기화"></p>
+            <p><input type="button" value="누르지마시오" onclick="sendit();"></p>
+        </p>
+    </form>
+
+    <script>
+        function sendit(){
+            alert("누르지 말랬지!");
+            console.log("[sendit] called");
+        }
+    </script>
+
+</body>
+<html>

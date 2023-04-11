@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>a link example</title>
+    <style>
+        a:link {
+            color: teal;
+            text-decoration: :underline;
+        }
+        a:visited {
+            color: crimson;
+            text-decoration: dotted;
+
+        }
+        a:hover {
+            color: magenta;
+            cursor: pointer;
+        }
+        a:active {
+            color: yellow;
+            cursor: crosshair;
+        }
+    </style>
+</head>
+<body>
+    <h1>Link Test</h1>
+    <h2><a href="http://www.google.com">어디로 넘어가게 될까요?</a></h2>
+    <hr>
+
+    <h1 id="PageStart">페이지 시작</h1>
+    <p><a href="#region01">1번 구역으로</a></p> <!-- id의 애칭은 # -->
+    <p><a href="#region02">2번 구역으로</a></p>
+    <h2>Title01</h2><p>Contents01</p>
+    <h2>Title02</h2><p>Contents02</p>
+    <h2>Title03</h2><p>Contents03</p>
+    <h2>Title04</h2><p>Contents04</p>
+    <h2>Title05</h2><p>Contents05</p>
+    <h2>Title06</h2><p>Contents06</p>
+    <h2>Title07</h2><p>Contents07</p>
+    <h2>Title08</h2><p>Contents08</p>
+    <h2>Title09</h2><p>Contents09</p>
+    <h2>Title010</h2><p>Contents10</p>
+
+    <h2><a id="region01">Title011</a></h2><p>Contents11</p>
+    <h2>Title012</h2><p>Contents12</p>
+    <h2>Title013</h2><p>Contents13</p>
+
+    <h2><a id="region02">Title014</a></h2><p>Contents14</p>
+    <h2>Title015</h2><p>Contents15</p>
+    <h2>Title016</h2><p>Contents16</p>
+    <h2><a href="#PageStart">처음으로</a></h2>
+</body>
+</html>
